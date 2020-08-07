@@ -5,7 +5,8 @@ Vue.use(Vuex)
 import axios from 'axios'
 export default new Vuex.Store({
 	state: {
-		homeObj:''
+		homeObj:'',
+		speechList:''
 	},
 	mutations: {
 		userLists(context) {
@@ -15,6 +16,15 @@ export default new Vuex.Store({
 			})
 			.then(rel => {
 				context.homeObj = rel.data
+			})
+		},
+		speechList(context){
+			axios({
+				url:'https://www.fastmock.site/mock/634944dcacc043c80eafe845adddcb9e/userName/speech',
+				method:'get'
+			})
+			.then(rel => {
+				context.speechList = rel.data
 			})
 		}
 	},

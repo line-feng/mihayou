@@ -125,7 +125,7 @@
 
 	.lv {
 		color: white;
-		padding: 2px 8px;
+		padding: 0px 10px;
 		font-size: 12px;
 		margin-left: 4px;
 		border-radius: 2px;

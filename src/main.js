@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 
 import 'vant/lib/index.css';
 import '@/assets/FyCss.css'
+import 'iview/dist/styles/iview.css'
 
 new Vue({
   router,
