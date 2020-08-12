@@ -22,7 +22,33 @@ export default [{
 	},
 	{
 		path: '/myhomepage',
-		component: () => import('@/views/myHomePage/myHomePage')
+		component: () => import('@/views/myHomePage/myHomePage'),
+		children: [{
+				path: 'myhome',
+				component: () => import('@/views/myHomePage/myHome')
+			},
+			{
+				path: '/myhomepage',
+				redirect: '/myhomepage/myhome'
+			},
+			{
+				path: 'login',
+				component: () => import('@/views/myHomePage/login')
+			},
+			{
+				path: 'registered',
+				component: () => import('@/views/myHomePage/registered')
+			}, {
+				path: 'focus',
+				component: () => import('@/views/myHomePage/focus')
+			}, {
+				path: 'communitylevel',
+				component: () => import('@/views/myHomePage/communityLevel')
+			},{
+				path:'setupthe',
+				component:()=>import('@/views/myHomePage/setUpThe')
+			}
+		],
 	}, {
 		path: "/announcement",
 		component: () => import('@/views/speech/announCement')

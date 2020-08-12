@@ -79,11 +79,11 @@
 
 	.HeadImg img {
 		width: 100%;
-		height: 150px;
+		height: 200px;
 	}
 
 	.user img {
-		width: 100%;
+		width: 80%;
 	}
 
 	.user>div {
@@ -95,7 +95,7 @@
 	}
 
 	.user {
-		padding: 0 5px;
+		padding: 5px;
 		background: #F7F7F7;
 	}
 

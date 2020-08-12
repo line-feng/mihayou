@@ -9,23 +9,23 @@
 					<div class="hei"></div>
 					<van-pull-refresh v-model="isLoading" @refresh="onRefresh">
 						<div v-show="index == 0">
-							<comporing></comporing>
+							<comporing :userList='$store.state.homeObj'></comporing>
 						</div>
 
 						<div v-show="index == 1">
-							<comporing></comporing>
+							<comporing :userList='$store.state.bhsObj'></comporing>
 						</div>
 
 						<div v-show="index == 2">
-							<comporing></comporing>
+							<comporing :userList='$store.state.homeObj'></comporing>
 						</div>
 
 						<div v-show="index == 3">
-							<comporing></comporing>
+							<comporing :userList='$store.state.homeObj'></comporing>
 						</div>
 
 						<div v-show="index == 4">
-							<comporing></comporing>
+							<comporing :userList='$store.state.homeObj'></comporing>
 						</div>
 					</van-pull-refresh>
 				</div>
@@ -83,6 +83,10 @@
 					}
 				]
 			}
+		},
+		created() {
+			this.$store.commit('userLists');
+			this.$store.commit('bhs');
 		},
 		methods: {
 			onRefresh() {

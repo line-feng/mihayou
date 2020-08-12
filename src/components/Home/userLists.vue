@@ -3,7 +3,7 @@
 		<div style="margin: 0 auto;padding-top: 10px;">
 			<div style="background: white;padding: 10px 5px;">
 				<div class="dc-flex">
-					<img src="../../assets/mihayouImg/首页/7.png" class="headPortrait" />
+					<img :src="userLists.img" class="headPortrait" />
 					<div class="name">
 						<div class="dc-flex jc-center alit-center">
 							<div>

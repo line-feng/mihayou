@@ -25,8 +25,7 @@
 				</span>
 			</div>
 		</div>
-
-		<div @click='deTails(item)' v-for="(item,index) in $store.state.homeObj.userList" :key='index'>
+		<div @click='deTails(item)' v-for="(item,index) in userList.userList" :key='index'>
 			<user-lists :userLists='item' ></user-lists>
 		</div>
 
@@ -40,6 +39,7 @@
 	} from 'vant';
 	import userLists from '@/components/Home/userLists'
 	export default {
+		props:['userList'],
 		components: {
 			[Swipe.name]: Swipe,
 			[SwipeItem.name]: SwipeItem,
@@ -66,12 +66,11 @@
 				]
 			}
 		},
-		created() {
-			this.$store.commit('userLists')
-		},
+		// created() {
+		// 	this.$store.commit('userLists')
+		// },
 		methods:{
 			deTails(item){
-				console.log(item)
 				this.$router.push({
 					name:'details',
 					params:{
